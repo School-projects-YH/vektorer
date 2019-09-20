@@ -6,24 +6,25 @@ namespace vektorer
     {
         static void Main(string[] args)
         {
-            int[] five_int_array = new int[5];
+            string[] five_string_array = new string[5];
 
             for (int i = 0; i < 5; i++){
-                Console.WriteLine("Skriv in ett tal: ");
+                Console.WriteLine("Skriv in ett namn: ");
 
                 string input = Console.ReadLine();
-                int tal_input = Convert.ToInt32(input);
 
-                five_int_array[i] = tal_input;
+                five_string_array[i] = input;
             }
-            
-            int sum = 0;
+
             for (int i = 0; i < 5; i++){
-                int foobar = five_int_array[i];
-                sum += foobar;
+                string oneInt = five_string_array[i];
             }
 
-            Console.WriteLine("Din summa blev: {0}", sum);
+            Console.WriteLine("Du skrev namnen:");
+
+            for (int i = 0; i < 5; i++){
+                Console.Write(" " + five_string_array[i]);
+            }
 
         }
     }
